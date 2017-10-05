@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+<LinearLayout
+    android:orientation="vertical"
+        android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    >
+
+        <TextView
+            android:layout_weight="16"
+            android:layout_width="match_parent"
+            android:text="Dziś cały dzień byłem zajęty. Miałem mega męczacy dzień. Możesz wejść na messnegera teraz? Nie dam rady dziś przyjechać - jutro będę koło południa. Zadzwonie do Ciebie jutro z rana, teraz nie bardzo mam jak gadać"
+            android:textColor="@android:color/black"
+            android:textSize="20dp"
+            android:background="@android:color/white"
+            android:layout_height="0dp" />
+
+        <Button
+            android:background="@android:color/white"
+            android:textSize="10dp"
+            android:textColor="@android:color/darker_gray"
+            android:id="@+id/kolo1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <Button
+            android:background="#FFFFD2"
+            android:textSize="10dp"
+            android:textColor="@android:color/darker_gray"
+            android:id="@+id/kolo2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <Button
+            android:background="@android:color/white"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="10dp"
+            android:id="@+id/kolo3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <Button
+            android:background="#FFFFD2"
+            android:id="@+id/kolo4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <Button
+            android:background="@android:color/white"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="10dp"
+            android:id="@+id/kolo5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <Button
+            android:textColor="@android:color/darker_gray"
+            android:background="#FFFFD2"
+            android:textSize="10dp"
+            android:id="@+id/kolo6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <Button
+            android:textColor="@android:color/darker_gray"
+            android:background="@android:color/white"
+            android:textSize="10dp"
+            android:id="@+id/kolo7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <Button
+            android:textColor="@android:color/darker_gray"
+            android:background="#FFFFD2"
+            android:textSize="10dp"
+            android:id="@+id/kolo8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <Button
+            android:textColor="@android:color/darker_gray"
+            android:background="@android:color/white"
+            android:textSize="10dp"
+            android:id="@+id/kolo9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <Button
+            android:textColor="@android:color/darker_gray"
+            android:background="#FFFFD2"
+            android:textSize="10dp"
+            android:id="@+id/kolo10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <Button
+            android:textColor="@android:color/darker_gray"
+            android:background="@android:color/white"
+            android:textSize="10dp"
+            android:id="@+id/kolo11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <Button
+            android:textColor="@android:color/darker_gray"
+            android:background="#FFFFD2"
+            android:textSize="10dp"
+            android:id="@+id/kolo12"
+            android:text="example"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+
+
+</LinearLayout>
+
+</ScrollView>

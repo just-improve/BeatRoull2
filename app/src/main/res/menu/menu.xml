@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item
+        android:id="@+id/emailId"
+        android:title="Email"
+        app:showAsAction="ifRoom"
+        >
+
+    </item>
+    <item android:id="@+id/disableKeyboard"
+        android:title="Off"
+        app:showAsAction="always"
+        >
+    </item>
+
+
+    <item android:id="@+id/increaseId"
+        android:title="+"
+        app:showAsAction="always"
+        >
+    </item>
+    <item android:id="@+id/decreaseId"
+        android:title="-"
+        app:showAsAction="always"
+        >
+    </item>
+
+    <item android:id="@+id/listOfNumbersid"
+        android:title="Summary"
+        app:showAsAction="always"
+        >
+    </item>
+
+    <item android:id="@+id/deleteAll"
+        android:title="Delete"
+        app:showAsAction="always"
+        >
+    </item>
+
+
+
+
+</menu>

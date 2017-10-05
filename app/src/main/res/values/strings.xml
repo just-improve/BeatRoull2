@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Wiadomości</string>
+    <integer name="size_buttons">10</integer>
+</resources>
