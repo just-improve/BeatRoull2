@@ -184,7 +184,7 @@ public class BaseClass extends AppCompatActivity implements View.OnClickListener
 
             else if (etStr.substring(etStr.length()-1).equals(" ")){
                 b3.setTextColor(Color.GREEN);
-                b3.setBackgroundColor(Color.GRAY);
+//                b3.setBackgroundColor(Color.GRAY);
 
             }
 
