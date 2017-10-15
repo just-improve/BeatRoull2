@@ -29,7 +29,7 @@ public class MainActivity  extends BaseClass {
         findViewById(R.id.num0).setOnClickListener(this);
         GetExtraFromIntent("wheel1");
         DatabaseAndSetSelection(ManagerDatabase.DatabaseClass.Col);
-
+        
     }
 
     @Override
