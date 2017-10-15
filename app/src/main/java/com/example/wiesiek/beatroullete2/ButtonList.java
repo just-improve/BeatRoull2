@@ -241,8 +241,8 @@ public class ButtonList extends AppCompatActivity implements View.OnClickListene
     public void SendingEmail (){
         Intent i = new Intent(Intent.ACTION_SEND);
         i.setType("message/rfc822");
-        i.putExtra(Intent.EXTRA_EMAIL  , new String[]{"janik.w777@gmail.com.com"});
-        i.putExtra(Intent.EXTRA_SUBJECT, "subject of email");
+        i.putExtra(Intent.EXTRA_EMAIL  , new String[]{"janik.w777@gmail.com"});
+        i.putExtra(Intent.EXTRA_SUBJECT, "Numbers from apk");
         String summaries = SendAllDataToEmail();
         i.putExtra(Intent.EXTRA_TEXT   ,summaries);
         try {

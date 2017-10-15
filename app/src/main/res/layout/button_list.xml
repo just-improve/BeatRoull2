@@ -16,9 +16,9 @@
         <TextView
             android:layout_weight="16"
             android:layout_width="match_parent"
-            android:text="Dziś cały dzień byłem zajęty. Miałem mega męczacy dzień. Możesz wejść na messnegera teraz? Nie dam rady dziś przyjechać - jutro będę koło południa. Zadzwonie do Ciebie jutro z rana, teraz nie bardzo mam jak gadać"
+            android:text="@string/stary_tekst"
             android:textColor="@android:color/black"
-            android:textSize="20dp"
+            android:textSize="17dp"
             android:background="@android:color/white"
             android:layout_height="0dp" />
 
