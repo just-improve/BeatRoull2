@@ -301,7 +301,7 @@ public class BaseClass extends AppCompatActivity implements View.OnClickListener
     public void SendingEmail (){
         Intent i = new Intent(Intent.ACTION_SEND);
         i.setType("message/rfc822");
-        i.putExtra(Intent.EXTRA_EMAIL  , new String[]{"janik.w777@gmail.com.com"});
+        i.putExtra(Intent.EXTRA_EMAIL  , new String[]{"janik.w777@gmail.com"});
         i.putExtra(Intent.EXTRA_SUBJECT, "subject of email");
         i.putExtra(Intent.EXTRA_TEXT   , editText.getText().toString() );
         try {
