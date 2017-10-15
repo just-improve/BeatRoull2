@@ -3,5 +3,6 @@
     <string name="ewa_tekst">Hej. Co słychać u Ciebie? Dziś byłam na zakupach. Troszkę zmęczona jestem dziś. Wpadnę do Ciebie jutro to na spokojnie pogadamy, albo zadzwonie to wtedy sobie na spokojnie poagadamy, pozdro buźki :) .</string>
     <string name="stary_tekst">Siema. Miałem mega męczacy dzień. Możesz wejść na messnegera teraz? Nie dam rady dziś przyjechać - jutro będę koło południa. Zadzwonie do Ciebie jutro z rana, teraz nie bardzo mam jak gadać</string>
     <string name="no_use_string">Jestem!!!!!</string>
+    <string name="no_use_string2">Jestem!! </string>
     <integer name="size_buttons">10</integer>
 </resources>
