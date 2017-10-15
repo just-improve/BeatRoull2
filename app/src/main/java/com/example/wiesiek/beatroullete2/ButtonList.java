@@ -27,15 +27,16 @@ import java.util.TreeMap;
  */
 
 public class ButtonList extends AppCompatActivity implements View.OnClickListener {
-    Button button1, button2,button3, button4, button5,button6,button7,button8,button9, button10, button11, button12;
+    Button button1, button2, button3, button4, button5, button6, button7, button8, button9, button10, button11, button12;
     List<Integer> listWheel1;
     ManagerDatabase managerDatabase;
 
-    int overAllCount=0;
+    int overAllCount = 0;
     TreeMap<Integer, Integer> repetitions;
 
     LinearLayout linearLayout;
     SharedPreferences sharedPreferences;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         setContentView(R.layout.button_list);
@@ -67,19 +68,19 @@ public class ButtonList extends AppCompatActivity implements View.OnClickListene
         button12.setOnClickListener(this);
 
         linearLayout = (LinearLayout) findViewById(R.id.linearEditText);
-        sharedPreferences = getSharedPreferences("mainfile",MODE_PRIVATE);
-        String button1Str=sharedPreferences.getString("name1","");
-        String button2Str=sharedPreferences.getString("name2","");
-        String button3Str=sharedPreferences.getString("name3","");
-        String button4Str=sharedPreferences.getString("name4","");
-        String button5Str=sharedPreferences.getString("name5","");
-        String button6Str=sharedPreferences.getString("name6","");
-        String button7Str=sharedPreferences.getString("name7","");
-        String button8Str=sharedPreferences.getString("name8","");
-        String button9Str=sharedPreferences.getString("name9","");
-        String button10Str=sharedPreferences.getString("name10","");
-        String button11Str=sharedPreferences.getString("name11","");
-        String button12Str=sharedPreferences.getString("name12","");
+        sharedPreferences = getSharedPreferences("mainfile", MODE_PRIVATE);
+        String button1Str = sharedPreferences.getString("name1", "");
+        String button2Str = sharedPreferences.getString("name2", "");
+        String button3Str = sharedPreferences.getString("name3", "");
+        String button4Str = sharedPreferences.getString("name4", "");
+        String button5Str = sharedPreferences.getString("name5", "");
+        String button6Str = sharedPreferences.getString("name6", "");
+        String button7Str = sharedPreferences.getString("name7", "");
+        String button8Str = sharedPreferences.getString("name8", "");
+        String button9Str = sharedPreferences.getString("name9", "");
+        String button10Str = sharedPreferences.getString("name10", "");
+        String button11Str = sharedPreferences.getString("name11", "");
+        String button12Str = sharedPreferences.getString("name12", "");
 
         button1.setText(button1Str);
         button2.setText(button2Str);
@@ -105,18 +106,18 @@ public class ButtonList extends AppCompatActivity implements View.OnClickListene
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId()==R.id.sendAllId){
+        if (item.getItemId() == R.id.sendAllId) {
             SendingEmail();
         }
         return super.onOptionsItemSelected(item);
     }
 
-    public String Calculations (String kolumna, Button button){
+    public String Calculations(String kolumna, Button button) {
         managerDatabase = new ManagerDatabase(this);
         //zwrot pierwszej kolumny
         StringBuilder sb = new StringBuilder();
         String allDatabase = managerDatabase.ReturnAllDataAsAString(kolumna);
-        if (allDatabase.equals("") || allDatabase==null){
+        if (allDatabase.equals("") || allDatabase == null) {
             allDatabase = " ";
         }
         listWheel1 = new ArrayList<>();
@@ -127,8 +128,8 @@ public class ButtonList extends AppCompatActivity implements View.OnClickListene
         return sb.toString();
     }
 
-    public String SendAllDataToEmail (){
-       StringBuilder sb = new StringBuilder();
+    public String SendAllDataToEmail() {
+        StringBuilder sb = new StringBuilder();
         String wheel1 = Calculations(ManagerDatabase.DatabaseClass.Col, button1);
         String wheel2 = Calculations(ManagerDatabase.DatabaseClass.Col2, button2);
         String wheel3 = Calculations(ManagerDatabase.DatabaseClass.Col3, button3);
@@ -161,25 +162,26 @@ public class ButtonList extends AppCompatActivity implements View.OnClickListene
 
 
     }
-    public List<Integer> TransformEditTextToListOfIntegersButtonClass(String dataStr){
+
+    public List<Integer> TransformEditTextToListOfIntegersButtonClass(String dataStr) {
         List<Integer> listOfInt = new ArrayList<>();
         int num_i = 0;
         int num_j = 0;
         int numberRecovered = 0;
 
-        for (int i = 0;i<dataStr.length()-1;i++){
-            if (dataStr.charAt(i) == ' '){
+        for (int i = 0; i < dataStr.length() - 1; i++) {
+            if (dataStr.charAt(i) == ' ') {
                 num_i = i;
 
-                for (int j = i+1;j<dataStr.length();j++){
+                for (int j = i + 1; j < dataStr.length(); j++) {
 
-                    if (dataStr.charAt(j) == ' '){
+                    if (dataStr.charAt(j) == ' ') {
                         num_j = j;
-                        Log.d("num", ""+ num_i+" "+num_j);
-                        String numRecovered = dataStr.substring(num_i+1,num_j);
+                        Log.d("num", "" + num_i + " " + num_j);
+                        String numRecovered = dataStr.substring(num_i + 1, num_j);
                         numberRecovered = Integer.parseInt(numRecovered);
                         listOfInt.add(numberRecovered);
-                        Log.d("num", ""+ numRecovered);
+                        Log.d("num", "" + numRecovered);
                         break;
                     }
                 }
@@ -190,14 +192,14 @@ public class ButtonList extends AppCompatActivity implements View.OnClickListene
         return listOfInt;
     }
 
-    public TreeMap<Integer, Integer> CountingNumbersReceiveHashMap(List<Integer> listOfInt){
+    public TreeMap<Integer, Integer> CountingNumbersReceiveHashMap(List<Integer> listOfInt) {
         TreeMap<Integer, Integer> repetitions1 = new TreeMap<Integer, Integer>();
 //        repetitions1 = new HashMap<Integer, Integer>();
         overAllCount = 0;
 
         Collections.sort(listOfInt);
-        for (int i = 0; i<listOfInt.size();i++){
-            Log.d("ooo",""+listOfInt.get(i));
+        for (int i = 0; i < listOfInt.size(); i++) {
+            Log.d("ooo", "" + listOfInt.get(i));
         }
 
         for (int i = 0; i < listOfInt.size(); ++i) {
@@ -217,7 +219,7 @@ public class ButtonList extends AppCompatActivity implements View.OnClickListene
 //        return repeatedNumStr;
     }
 
-    public String CreatingStringFromRepeatedNumbers(TreeMap<Integer,Integer> repetitions, Button button){
+    public String CreatingStringFromRepeatedNumbers(TreeMap<Integer, Integer> repetitions, Button button) {
         StringBuilder sb = new StringBuilder();
 
         for (Map.Entry<Integer, Integer> e : repetitions.entrySet()) {
@@ -233,18 +235,18 @@ public class ButtonList extends AppCompatActivity implements View.OnClickListene
         sb.append("\n");
         String repeatedNumbersStr = sb.toString();
         String overAllCountStr = String.valueOf(overAllCount);
-        repeatedNumbersStr = button.getText().toString() + " Ilosc liczb to "+overAllCountStr+"\n"+repeatedNumbersStr;
+        repeatedNumbersStr = button.getText().toString() + " Ilosc liczb to " + overAllCountStr + "\n" + repeatedNumbersStr;
 
         return repeatedNumbersStr;
     }
 
-    public void SendingEmail (){
+    public void SendingEmail() {
         Intent i = new Intent(Intent.ACTION_SEND);
         i.setType("message/rfc822");
-        i.putExtra(Intent.EXTRA_EMAIL  , new String[]{"janik.w777@gmail.com"});
+        i.putExtra(Intent.EXTRA_EMAIL, new String[]{"janik.w777@gmail.com"});
         i.putExtra(Intent.EXTRA_SUBJECT, "Numbers from apk");
         String summaries = SendAllDataToEmail();
-        i.putExtra(Intent.EXTRA_TEXT   ,summaries);
+        i.putExtra(Intent.EXTRA_TEXT, summaries);
         try {
             startActivity(Intent.createChooser(i, "Send mail..."));
         } catch (android.content.ActivityNotFoundException ex) {
@@ -258,81 +260,78 @@ public class ButtonList extends AppCompatActivity implements View.OnClickListene
         super.onStop();
 //        sharedPreferences
         SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putString("name1",button1.getText().toString());
-        editor.putString("name2",button2.getText().toString());
-        editor.putString("name3",button3.getText().toString());
-        editor.putString("name4",button4.getText().toString());
-        editor.putString("name5",button5.getText().toString());
-        editor.putString("name6",button6.getText().toString());
-        editor.putString("name7",button7.getText().toString());
-        editor.putString("name8",button8.getText().toString());
-        editor.putString("name9",button9.getText().toString());
-        editor.putString("name10",button10.getText().toString());
-        editor.putString("name11",button11.getText().toString());
-        editor.putString("name12",button12.getText().toString());
+        editor.putString("name1", button1.getText().toString());
+        editor.putString("name2", button2.getText().toString());
+        editor.putString("name3", button3.getText().toString());
+        editor.putString("name4", button4.getText().toString());
+        editor.putString("name5", button5.getText().toString());
+        editor.putString("name6", button6.getText().toString());
+        editor.putString("name7", button7.getText().toString());
+        editor.putString("name8", button8.getText().toString());
+        editor.putString("name9", button9.getText().toString());
+        editor.putString("name10", button10.getText().toString());
+        editor.putString("name11", button11.getText().toString());
+        editor.putString("name12", button12.getText().toString());
         editor.commit();
     }
 
 
-
     @Override
     public void onClick(View v) {
-        if (v.getId()==R.id.kolo1){
+        if (v.getId() == R.id.kolo1) {
             Intent intent = new Intent(this, MainActivity.class);
             intent.putExtra("wheel1", button1.getText().toString());
             startActivity(intent);
-        } else if (v.getId()==R.id.kolo2){
+        } else if (v.getId() == R.id.kolo2) {
             Intent intent = new Intent(this, Wheel2.class);
             intent.putExtra("wheel2", button2.getText().toString());
             startActivity(intent);
-        } else if (v.getId()==R.id.kolo3){
+        } else if (v.getId() == R.id.kolo3) {
             Intent intent = new Intent(this, Wheel3.class);
 //            linearLayout.setBackgroundColor(Color.BLUE);
             intent.putExtra("wheel3", button3.getText().toString());
             startActivity(intent);
-        } else if (v.getId()==R.id.kolo4){
+        } else if (v.getId() == R.id.kolo4) {
             Intent intent = new Intent(this, Wheel4.class);
 //            linearLayout.setBackgroundColor(Color.GREEN);
             intent.putExtra("wheel4", button4.getText().toString());
             startActivity(intent);
-        }  else if (v.getId()==R.id.kolo5){
+        } else if (v.getId() == R.id.kolo5) {
             Intent intent = new Intent(this, Wheel5.class);
 //            linearLayout.setBackgroundColor(Color.GREEN);
             intent.putExtra("wheel5", button5.getText().toString());
             startActivity(intent);
-        }  else if (v.getId()==R.id.kolo6){
+        } else if (v.getId() == R.id.kolo6) {
             Intent intent = new Intent(this, Wheel6.class);
 //            linearLayout.setBackgroundColor(Color.GREEN);
             intent.putExtra("wheel6", button6.getText().toString());
             startActivity(intent);
-        } else if (v.getId()==R.id.kolo7){
+        } else if (v.getId() == R.id.kolo7) {
             Intent intent = new Intent(this, Wheel7.class);
 //            linearLayout.setBackgroundColor(Color.GREEN);
             intent.putExtra("wheel7", button7.getText().toString());
             startActivity(intent);
-        } else if (v.getId()==R.id.kolo8){
+        } else if (v.getId() == R.id.kolo8) {
             Intent intent = new Intent(this, Wheel8.class);
 //            linearLayout.setBackgroundColor(Color.GREEN);
             intent.putExtra("wheel8", button8.getText().toString());
             startActivity(intent);
-        } else if (v.getId()==R.id.kolo9){
+        } else if (v.getId() == R.id.kolo9) {
             Intent intent = new Intent(this, Wheel9.class);
 //            linearLayout.setBackgroundColor(Color.GREEN);
             intent.putExtra("wheel9", button9.getText().toString());
             startActivity(intent);
-        } else if (v.getId()==R.id.kolo10){
+        } else if (v.getId() == R.id.kolo10) {
             Intent intent = new Intent(this, Wheel10.class);
 //            linearLayout.setBackgroundColor(Color.GREEN);
             intent.putExtra("wheel10", button10.getText().toString());
             startActivity(intent);
-        }
-        else if (v.getId()==R.id.kolo11){
+        } else if (v.getId() == R.id.kolo11) {
             Intent intent = new Intent(this, Wheel11.class);
 //            linearLayout.setBackgroundColor(Color.GREEN);
             intent.putExtra("wheel11", button11.getText().toString());
             startActivity(intent);
-        }
-        else if (v.getId()==R.id.kolo12){
+        } else if (v.getId() == R.id.kolo12) {
             Intent intent = new Intent(this, Wheel12.class);
 //            linearLayout.setBackgroundColor(Color.GREEN);
             intent.putExtra("wheel12", button12.getText().toString());
@@ -347,7 +346,7 @@ public class ButtonList extends AppCompatActivity implements View.OnClickListene
         final EditText edit_dialog = (EditText) view.findViewById(R.id.editTextButtonChange);
 //        edit_dialog.setText(str);
         builder.setView(view);
-        builder.setNegativeButton("cancel",null);
+        builder.setNegativeButton("cancel", null);
         builder.setPositiveButton("confirm", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
@@ -364,7 +363,7 @@ public class ButtonList extends AppCompatActivity implements View.OnClickListene
 //        edit_dialog.setFocusableInTouchMode(true);
     }
 
-    public void LongClicki (){
+    public void LongClicki() {
         button1.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {

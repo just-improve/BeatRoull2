@@ -10,7 +10,7 @@
 
     </item>
     <item android:id="@+id/disableKeyboard"
-        android:title="Off"
+        android:title="On"
         app:showAsAction="always"
         >
     </item>
@@ -34,7 +34,7 @@
     </item>
 
     <item android:id="@+id/deleteAll"
-        android:title="Delete"
+        android:title="D"
         app:showAsAction="always"
         >
     </item>
