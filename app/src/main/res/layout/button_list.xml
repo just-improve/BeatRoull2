@@ -16,7 +16,7 @@
         <TextView
             android:layout_weight="16"
             android:layout_width="match_parent"
-            android:text="@string/stary_tekst"
+            android:text="@string/ewa_tekst"
             android:textColor="@android:color/black"
             android:textSize="17dp"
             android:background="@android:color/white"
