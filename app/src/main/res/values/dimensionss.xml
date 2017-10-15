@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="number_value">15dp</dimen>
+    <dimen name="wyswietlach_value">11dp</dimen>
+    <dimen name="text_message_value">15dp</dimen>
+</resources>
