@@ -42,7 +42,7 @@
                     android:background="@android:color/white"
                     android:text="@string/srebro2"
                     android:textColor="@android:color/black"
-                    android:textSize="@dimen/text_message_value" />
+                    android:textSize="@dimen/srebro_text" />
 
              </ScrollView>
 
@@ -82,7 +82,7 @@
                     android:onClick="ServiceButtons"
                     android:text="1"
                     android:textColor="@android:color/darker_gray"
-                    android:textSize="@dimen/number_value"
+                    android:textSize="@dimen/number_button_value"
 
 
                     />
@@ -95,7 +95,7 @@
                     android:background="@android:color/white"
                     android:text="2"
                     android:textColor="@android:color/darker_gray"
-                    android:textSize="@dimen/number_value" />
+                    android:textSize="@dimen/number_button_value" />
 
                 <Button
                     android:id="@+id/num3"
@@ -105,7 +105,7 @@
                     android:background="@android:color/white"
                     android:text="3"
                     android:textColor="@android:color/darker_gray"
-                    android:textSize="@dimen/number_value" />
+                    android:textSize="@dimen/number_button_value" />
 
             </LinearLayout>
 
@@ -124,7 +124,7 @@
                     android:background="@android:color/white"
                     android:text="4"
                     android:textColor="@android:color/darker_gray"
-                    android:textSize="@dimen/number_value"
+                    android:textSize="@dimen/number_button_value"
 
 
                     />
@@ -137,7 +137,7 @@
                     android:background="@android:color/white"
                     android:text="5"
                     android:textColor="@android:color/darker_gray"
-                    android:textSize="@dimen/number_value" />
+                    android:textSize="@dimen/number_button_value" />
 
                 <Button
                     android:id="@+id/num6"
@@ -147,7 +147,7 @@
                     android:background="@android:color/white"
                     android:text="6"
                     android:textColor="@android:color/darker_gray"
-                    android:textSize="@dimen/number_value" />
+                    android:textSize="@dimen/number_button_value" />
 
 
             </LinearLayout>
@@ -166,7 +166,7 @@
                     android:background="@android:color/white"
                     android:text="7"
                     android:textColor="@android:color/darker_gray"
-                    android:textSize="@dimen/number_value"
+                    android:textSize="@dimen/number_button_value"
 
 
                     />
@@ -179,7 +179,7 @@
                     android:background="@android:color/white"
                     android:text="8"
                     android:textColor="@android:color/darker_gray"
-                    android:textSize="@dimen/number_value" />
+                    android:textSize="@dimen/number_button_value" />
 
                 <Button
                     android:id="@+id/num9"
@@ -189,7 +189,7 @@
                     android:background="@android:color/white"
                     android:text="9"
                     android:textColor="@android:color/darker_gray"
-                    android:textSize="@dimen/number_value" />
+                    android:textSize="@dimen/number_button_value" />
 
             </LinearLayout>
 
@@ -207,7 +207,7 @@
                     android:background="@android:color/white"
                     android:text=" "
                     android:textColor="@android:color/darker_gray"
-                    android:textSize="@dimen/number_value" />
+                    android:textSize="@dimen/number_button_value" />
 
                 <Button
                     android:id="@+id/num0"
@@ -217,7 +217,7 @@
                     android:background="@android:color/white"
                     android:text="0"
                     android:textColor="@android:color/darker_gray"
-                    android:textSize="@dimen/number_value" />
+                    android:textSize="@dimen/number_button_value" />
 
                 <Button
                     android:id="@+id/deleteId"
@@ -227,7 +227,7 @@
                     android:background="@android:color/white"
                     android:text="C"
                     android:textColor="@android:color/darker_gray"
-                    android:textSize="@dimen/number_value" />
+                    android:textSize="@dimen/number_button_value" />
 
 
             </LinearLayout>
