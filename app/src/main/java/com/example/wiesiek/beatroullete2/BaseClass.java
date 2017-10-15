@@ -155,7 +155,7 @@ public class BaseClass extends AppCompatActivity implements View.OnClickListener
             }
             else if (etStr.substring(etStr.length()-1).equals(" ")){
                 b1.setTextColor(Color.GREEN);
-                b1.setBackgroundColor(Color.GRAY);
+//                b1.setBackgroundColor(Color.GRAY);
             }
 
             etStr+=b1Str;
@@ -168,7 +168,7 @@ public class BaseClass extends AppCompatActivity implements View.OnClickListener
                 SetColorsToWhite();
             } else if (etStr.substring(etStr.length()-1).equals(" ")){
                 b2.setTextColor(Color.GREEN);
-                b2.setBackgroundColor(Color.GRAY);
+//                b2.setBackgroundColor(Color.GRAY);
 
             }
             etStr+=b2Str;
@@ -184,7 +184,7 @@ public class BaseClass extends AppCompatActivity implements View.OnClickListener
 
             else if (etStr.substring(etStr.length()-1).equals(" ")){
                 b3.setTextColor(Color.GREEN);
-                b3.setBackgroundColor(Color.GRAY);
+//                b3.setBackgroundColor(Color.GRAY);
 
             }
 
