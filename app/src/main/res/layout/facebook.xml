@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width ="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#FF34495E"
+        android:id="@+id/slide_bar_list_activity" >
+        <!-- All the layout of sliding goes here -->
+
+
+
+    </LinearLayout>
+
+
+    <!-- Just make your content layout here -->
+    <LinearLayout
+        android:layout_width ="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#FF112131"
+        android:id="@+id/content_bar_list_activity" >
+        <!-- All the layout of content goes here -->
+
+
+
+        <RelativeLayout
+            android:id = "@+id/head1"
+            android:layout_width = "match_parent"
+            android:layout_height = "wrap_content"
+            android:layout_alignParentTop = "true"
+            android:background="#336699"
+            android:maxWidth="48dp" >
+
+            <ImageButton
+                android:id ="@+id/main_menu_action_left_of_lable"
+                android:layout_width = "wrap_content"
+                android:layout_height = "wrap_content"
+                android:layout_alignParentLeft = "true"
+                android:layout_centerVertical ="true"
+                android:layout_weight="1"
+                android:src="@drawable/nbc_news_kopia"
+                android:background="@drawable/nbc_news_kopia"
+                android:padding="5dp"/>
+            <!-- Title lable Of home bar.  -->
+            <TextView
+                android:id ="@+id/main_toptext"
+                android:layout_width = "fill_parent"
+                android:layout_height = "wrap_content"
+                android:gravity="center"
+                android:layout_weight="2"
+                android:shadowDy=".4"
+                android:shadowDx=".4"
+                android:clickable="true"
+                android:shadowRadius=".7"
+                android:shadowColor="#000000"
+                android:textColor = "#ffffff"
+                android:layout_toRightOf="@+id/main_menu_action_left_of_lable"
+                android:layout_toLeftOf="@+id/main_right_of_lable"
+                android:layout_centerInParent ="true"
+                android:textSize = "18dp"
+                android:layout_centerVertical ="true"
+                android:padding="5dp"
+                android:text = " Shiba prasad jana "
+                android:singleLine = "true"/>
+            <!-- Search -->
+            <ImageButton
+                android:id ="@+id/main_right_of_lable"
+                android:layout_width = "wrap_content"
+                android:layout_height = "wrap_content"
+                android:layout_alignParentRight = "true"
+                android:layout_centerVertical ="true"
+                android:layout_weight="1"
+                android:src="@drawable/nbc_news_kopia"
+                android:background="@drawable/nbc_news_kopia"
+                android:padding="5dp"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+</LinearLayout>
