@@ -17,15 +17,20 @@
             android:background="@android:color/white"
             android:orientation="vertical">
 
-            <TextView
+            <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="0dp"-->
+                <!--android:layout_weight="5"-->
+                <!--android:background="@android:color/white"-->
+                <!--android:text="@string/srebro"-->
+                <!--android:textColor="@android:color/black"-->
+                <!--android:textSize="@dimen/text_message_value" />-->
+            <ImageView
+                android:id="@+id/imageId"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="5"
-                android:background="@android:color/white"
-                android:text="@string/srebro"
-                android:textColor="@android:color/black"
-                android:textSize="@dimen/text_message_value" />
-
+                android:layout_height="match_parent"
+                android:src="@mipmap/face8"
+                />
 
             <Button
                 android:id="@+id/kolo1"

@@ -15,6 +15,7 @@ import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -22,6 +23,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
+import java.util.Random;
 import java.util.TreeMap;
 
 /**
@@ -40,6 +42,10 @@ public class BaseClass extends AppCompatActivity implements View.OnClickListener
     String repeatedNumStr ="";
     int overAllCount=0;
     String countedNumbersStr="";
+    //może stworzyć klasę nową i zrobić instancję tej klasy i metodę która zwraca tablicę
+    int [] array_photo = {R.mipmap.facebook_middle, R.mipmap.choose,R.mipmap.face1,R.mipmap.face2,R.mipmap.face3,R.mipmap.face4,R.mipmap.face5,R.mipmap.face6,R.mipmap.face7,R.mipmap.face8,R.mipmap.face9};
+    ImageView imageView;
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -62,6 +68,20 @@ public class BaseClass extends AppCompatActivity implements View.OnClickListener
         managerDatabase = new ManagerDatabase(this);
         editText.setRawInputType(InputType.TYPE_NULL);
         editText.setFocusable(true);
+        imageView = (ImageView) findViewById(R.id.middle_photo_id);
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Random random = new Random();
+                int a = random.nextInt(array_photo.length);
+                imageView.setImageResource(array_photo[a]);
+//                final MediaPlayer mp = MediaPlayer.create(this, R.raw.messenger);
+            }
+        });
+
+//        ViewPager viewPager = (ViewPager) findViewById(R.id.view_pager);
+//        ImageAdapter adapter = new ImageAdapter(this);
+//        viewPager.setAdapter(adapter);
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

@@ -14,12 +14,14 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
+import java.util.Random;
 import java.util.TreeMap;
 
 /**
@@ -31,6 +33,12 @@ public class ButtonList extends AppCompatActivity implements View.OnClickListene
     List<Integer> listWheel1;
     ManagerDatabase managerDatabase;
 
+    ImageView imageView1;
+
+    int [] array_photo = {R.mipmap.facebook_middle, R.mipmap.choose,R.mipmap.face1,R.mipmap.face2,R.mipmap.face3,R.mipmap.face4,R.mipmap.face5,R.mipmap.face6,R.mipmap.face7,R.mipmap.face8,R.mipmap.face9};
+
+    Random random;
+    int los;
     int overAllCount = 0;
     TreeMap<Integer, Integer> repetitions;
 
@@ -41,6 +49,9 @@ public class ButtonList extends AppCompatActivity implements View.OnClickListene
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         setContentView(R.layout.button_list);
         super.onCreate(savedInstanceState);
+        imageView1 = (ImageView) findViewById(R.id.imageId);
+        imageView1.setOnClickListener(this);
+
         button1 = (Button) findViewById(R.id.kolo1);
         button2 = (Button) findViewById(R.id.kolo2);
         button3 = (Button) findViewById(R.id.kolo3);
@@ -336,6 +347,10 @@ public class ButtonList extends AppCompatActivity implements View.OnClickListene
 //            linearLayout.setBackgroundColor(Color.GREEN);
             intent.putExtra("wheel12", button12.getText().toString());
             startActivity(intent);
+        } else if (v.getId()==R.id.imageId){
+            random = new Random();
+            los = random.nextInt(array_photo.length);
+            imageView1.setImageResource(array_photo[los]);
         }
     }
 
