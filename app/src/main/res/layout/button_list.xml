@@ -44,16 +44,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:background="@android:color/white"
+                android:background="@color/wheel_button_odd_color_background"
                 android:textColor="@android:color/darker_gray"
-                android:textSize="10dp" />
+                android:textSize="@dimen/text_size_of_buttons_wheels" />
 
             <Button
                 android:id="@+id/kolo2"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:background="#FFFFD2"
+                android:background="@color/wheel_button_even_color_background"
                 android:textColor="@android:color/darker_gray"
                 android:textSize="@dimen/text_size_of_buttons_wheels" />
 
@@ -62,7 +62,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:background="@android:color/white"
+                android:background="@color/wheel_button_odd_color_background"
                 android:textColor="@android:color/darker_gray"
                 android:textSize="@dimen/text_size_of_buttons_wheels" />
 
@@ -72,7 +72,7 @@
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:textColor="@android:color/darker_gray"
-                android:background="#FFFFD2"
+                android:background="@color/wheel_button_even_color_background"
                 android:textSize="@dimen/text_size_of_buttons_wheels"
                 />
 
@@ -81,7 +81,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:background="@android:color/white"
+                android:background="@color/wheel_button_odd_color_background"
                 android:textColor="@android:color/darker_gray"
                 android:textSize="@dimen/text_size_of_buttons_wheels" />
 
@@ -90,7 +90,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:background="#FFFFD2"
+                android:background="@color/wheel_button_even_color_background"
                 android:textColor="@android:color/darker_gray"
                 android:textSize="@dimen/text_size_of_buttons_wheels" />
 
@@ -99,7 +99,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:background="@android:color/white"
+                android:background="@color/wheel_button_odd_color_background"
                 android:textColor="@android:color/darker_gray"
                 android:textSize="@dimen/text_size_of_buttons_wheels" />
 
@@ -108,7 +108,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:background="#FFFFD2"
+                android:background="@color/wheel_button_even_color_background"
                 android:textColor="@android:color/darker_gray"
                 android:textSize="@dimen/text_size_of_buttons_wheels" />
 
@@ -117,7 +117,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:background="@android:color/white"
+                android:background="@color/wheel_button_odd_color_background"
                 android:textColor="@android:color/darker_gray"
                 android:textSize="@dimen/text_size_of_buttons_wheels" />
 
@@ -126,7 +126,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:background="#FFFFD2"
+                android:background="@color/wheel_button_even_color_background"
                 android:textColor="@android:color/darker_gray"
                 android:textSize="@dimen/text_size_of_buttons_wheels" />
 
@@ -135,7 +135,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:background="@android:color/white"
+                android:background="@color/wheel_button_odd_color_background"
                 android:textColor="@android:color/darker_gray"
                 android:textSize="@dimen/text_size_of_buttons_wheels" />
 
@@ -144,7 +144,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:background="#FFFFD2"
+                android:background="@color/wheel_button_even_color_background"
                 android:text="example"
                 android:textColor="@android:color/darker_gray"
                 android:textSize="@dimen/text_size_of_buttons_wheels" />
