@@ -3,6 +3,7 @@ package com.example.wiesiek.beatroullete2;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AlertDialog;
@@ -34,6 +35,8 @@ public class ButtonList extends AppCompatActivity implements View.OnClickListene
     ManagerDatabase managerDatabase;
 
     ImageView imageView1;
+    ImageView imageViewUp;
+
 
     int [] array_photo = {R.mipmap.facebook_middle, R.mipmap.choose,R.mipmap.face1,R.mipmap.face2,R.mipmap.face3,R.mipmap.face4,R.mipmap.face5,R.mipmap.face6,R.mipmap.face7,R.mipmap.face8,R.mipmap.face9};
 
@@ -50,7 +53,11 @@ public class ButtonList extends AppCompatActivity implements View.OnClickListene
         setContentView(R.layout.button_list);
         super.onCreate(savedInstanceState);
         imageView1 = (ImageView) findViewById(R.id.imageId);
+        imageViewUp = (ImageView) findViewById(R.id.imageview_up_id);
+
         imageView1.setOnClickListener(this);
+        imageViewUp.setOnClickListener(this);
+
 
         button1 = (Button) findViewById(R.id.kolo1);
         button2 = (Button) findViewById(R.id.kolo2);
@@ -351,6 +358,10 @@ public class ButtonList extends AppCompatActivity implements View.OnClickListene
             random = new Random();
             los = random.nextInt(array_photo.length);
             imageView1.setImageResource(array_photo[los]);
+        }
+        else if (v.getId()==R.id.imageview_up_id){
+            final MediaPlayer mp = MediaPlayer.create(this, R.raw.facebook_sound);
+            mp.start();
         }
     }
 

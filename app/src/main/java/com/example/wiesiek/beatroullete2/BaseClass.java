@@ -3,6 +3,7 @@ package com.example.wiesiek.beatroullete2;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AlertDialog;
@@ -43,8 +44,10 @@ public class BaseClass extends AppCompatActivity implements View.OnClickListener
     int overAllCount=0;
     String countedNumbersStr="";
     //może stworzyć klasę nową i zrobić instancję tej klasy i metodę która zwraca tablicę
-    int [] array_photo = {R.mipmap.facebook_middle, R.mipmap.choose,R.mipmap.face1,R.mipmap.face2,R.mipmap.face3,R.mipmap.face4,R.mipmap.face5,R.mipmap.face6,R.mipmap.face7,R.mipmap.face8,R.mipmap.face9};
-    ImageView imageView;
+    int [] array_photo = { R.mipmap.choose,R.mipmap.face1,R.mipmap.face2,R.mipmap.face3,R.mipmap.face4,R.mipmap.face5,R.mipmap.face6,R.mipmap.face7,R.mipmap.face8,R.mipmap.face9};
+    ImageView imageViewCenter;
+    ImageView imageViewUp;
+
 
 
     @Override
@@ -68,16 +71,11 @@ public class BaseClass extends AppCompatActivity implements View.OnClickListener
         managerDatabase = new ManagerDatabase(this);
         editText.setRawInputType(InputType.TYPE_NULL);
         editText.setFocusable(true);
-        imageView = (ImageView) findViewById(R.id.middle_photo_id);
-        imageView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Random random = new Random();
-                int a = random.nextInt(array_photo.length);
-                imageView.setImageResource(array_photo[a]);
-//                final MediaPlayer mp = MediaPlayer.create(this, R.raw.messenger);
-            }
-        });
+        imageViewCenter = (ImageView) findViewById(R.id.middle_photo_id);
+        imageViewUp = (ImageView) findViewById(R.id.imageview_up_id);
+
+        imageViewUp.setOnClickListener(this);
+        imageViewCenter.setOnClickListener(this);
 
 //        ViewPager viewPager = (ViewPager) findViewById(R.id.view_pager);
 //        ImageAdapter adapter = new ImageAdapter(this);
@@ -292,6 +290,18 @@ public class BaseClass extends AppCompatActivity implements View.OnClickListener
                 editText.setText(etStr);
             }
             SetColorsToWhite();
+        }
+
+        else if (v.getId()==R.id.middle_photo_id){
+            Random random = new Random();
+            int a = random.nextInt(array_photo.length);
+            imageViewCenter.setImageResource(array_photo[a]);
+        }
+
+        else if (v.getId()==R.id.imageview_up_id){
+                            final MediaPlayer mp = MediaPlayer.create(this, R.raw.facebook_sound);
+            mp.start();
+
         }
 
         editText.setSelection(etStr.length());
