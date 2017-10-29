@@ -101,6 +101,9 @@ public class ManagerDatabase {
         public static final String Col10 ="Column10";
         public static final String Col11 ="Column11";
         public static final String Col12 ="Column12";
+        public static final String Col13 ="Column13";
+        public static final String Col14 ="Column14";
+        public static final String Col15 ="Column15";
         public Context context;
 
 
@@ -126,7 +129,10 @@ public class ManagerDatabase {
                     + Col9 + " TEXT, "
                     + Col10 + " TEXT, "
                     + Col11 + " TEXT, "
-                    + Col12 + " TEXT "
+                    + Col12 + " TEXT, "
+                    + Col13 + " TEXT, "
+                    + Col14 + " TEXT, "
+                    + Col15 + " TEXT "
                     + ");";
             db.execSQL(query);
         }

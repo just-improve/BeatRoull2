@@ -6,7 +6,7 @@
     android:orientation="vertical">
 
 
-    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -18,26 +18,24 @@
             android:orientation="vertical">
 
             <!--<TextView-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="0dp"-->
-                <!--android:layout_weight="5"-->
-                <!--android:background="@android:color/white"-->
-                <!--android:text="@string/srebro"-->
-                <!--android:textColor="@android:color/black"-->
-                <!--android:textSize="@dimen/text_message_value" />-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="0dp"-->
+            <!--android:layout_weight="5"-->
+            <!--android:background="@android:color/white"-->
+            <!--android:text="@string/srebro"-->
+            <!--android:textColor="@android:color/black"-->
+            <!--android:textSize="@dimen/text_message_value" />-->
             <ImageView
                 android:id="@+id/imageview_up_id"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:src="@mipmap/facebook_gora"
-                />
+                android:src="@mipmap/facebook_gora" />
 
             <ImageView
                 android:id="@+id/imageId"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:src="@mipmap/face8"
-                />
+                android:src="@mipmap/face8" />
 
             <Button
                 android:id="@+id/kolo1"
@@ -71,10 +69,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:textColor="@android:color/darker_gray"
                 android:background="@color/wheel_button_even_color_background"
-                android:textSize="@dimen/text_size_of_buttons_wheels"
-                />
+                android:textColor="@android:color/darker_gray"
+                android:textSize="@dimen/text_size_of_buttons_wheels" />
 
             <Button
                 android:id="@+id/kolo5"
@@ -146,6 +143,34 @@
                 android:layout_weight="1"
                 android:background="@color/wheel_button_even_color_background"
                 android:text="example"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="@dimen/text_size_of_buttons_wheels" />
+
+            <Button
+                android:id="@+id/kolo13"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@color/wheel_button_odd_color_background"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="@dimen/text_size_of_buttons_wheels" />
+
+            <Button
+                android:id="@+id/kolo14"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@color/wheel_button_even_color_background"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="@dimen/text_size_of_buttons_wheels" />
+
+            <Button
+                android:id="@+id/kolo15"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@color/wheel_button_odd_color_background"
+                android:text=""
                 android:textColor="@android:color/darker_gray"
                 android:textSize="@dimen/text_size_of_buttons_wheels" />
 

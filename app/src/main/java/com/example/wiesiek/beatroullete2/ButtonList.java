@@ -30,7 +30,7 @@ import java.util.TreeMap;
  */
 
 public class ButtonList extends AppCompatActivity implements View.OnClickListener {
-    Button button1, button2, button3, button4, button5, button6, button7, button8, button9, button10, button11, button12;
+    Button button1, button2, button3, button4, button5, button6, button7, button8, button9, button10, button11, button12, button13, button14, button15;
     List<Integer> listWheel1;
     ManagerDatabase managerDatabase;
 
@@ -71,6 +71,9 @@ public class ButtonList extends AppCompatActivity implements View.OnClickListene
         button10 = (Button) findViewById(R.id.kolo10);
         button11 = (Button) findViewById(R.id.kolo11);
         button12 = (Button) findViewById(R.id.kolo12);
+        button13 = (Button) findViewById(R.id.kolo13);
+        button14 = (Button) findViewById(R.id.kolo14);
+        button15 = (Button) findViewById(R.id.kolo15);
 
         button1.setOnClickListener(this);
         button2.setOnClickListener(this);
@@ -84,6 +87,9 @@ public class ButtonList extends AppCompatActivity implements View.OnClickListene
         button10.setOnClickListener(this);
         button11.setOnClickListener(this);
         button12.setOnClickListener(this);
+        button13.setOnClickListener(this);
+        button14.setOnClickListener(this);
+        button15.setOnClickListener(this);
 
         linearLayout = (LinearLayout) findViewById(R.id.linearEditText);
         sharedPreferences = getSharedPreferences("mainfile", MODE_PRIVATE);
@@ -99,6 +105,9 @@ public class ButtonList extends AppCompatActivity implements View.OnClickListene
         String button10Str = sharedPreferences.getString("name10", "");
         String button11Str = sharedPreferences.getString("name11", "");
         String button12Str = sharedPreferences.getString("name12", "");
+        String button13Str = sharedPreferences.getString("name13", "");
+        String button14Str = sharedPreferences.getString("name14", "");
+        String button15Str = sharedPreferences.getString("name15", "");
 
         button1.setText(button1Str);
         button2.setText(button2Str);
@@ -112,6 +121,9 @@ public class ButtonList extends AppCompatActivity implements View.OnClickListene
         button10.setText(button10Str);
         button11.setText(button11Str);
         button12.setText(button12Str);
+        button13.setText(button13Str);
+        button14.setText(button14Str);
+        button15.setText(button15Str);
 
         LongClicki();
     }
@@ -354,7 +366,23 @@ public class ButtonList extends AppCompatActivity implements View.OnClickListene
 //            linearLayout.setBackgroundColor(Color.GREEN);
             intent.putExtra("wheel12", button12.getText().toString());
             startActivity(intent);
-        } else if (v.getId()==R.id.imageId){
+        }else if (v.getId() == R.id.kolo13) {
+            Intent intent = new Intent(this, Wheel13.class);
+//            linearLayout.setBackgroundColor(Color.GREEN);
+            intent.putExtra("wheel13", button13.getText().toString());
+            startActivity(intent);
+        } else if (v.getId() == R.id.kolo14) {
+            Intent intent = new Intent(this, Wheel14.class);
+//            linearLayout.setBackgroundColor(Color.GREEN);
+            intent.putExtra("wheel14", button14.getText().toString());
+            startActivity(intent);
+        }  else if (v.getId() == R.id.kolo15) {
+            Intent intent = new Intent(this, Wheel15.class);
+//            linearLayout.setBackgroundColor(Color.GREEN);
+            intent.putExtra("wheel15", button15.getText().toString());
+            startActivity(intent);
+        }
+        else if (v.getId()==R.id.imageId){
             random = new Random();
             los = random.nextInt(array_photo.length);
             imageView1.setImageResource(array_photo[los]);
@@ -471,6 +499,29 @@ public class ButtonList extends AppCompatActivity implements View.OnClickListene
             @Override
             public boolean onLongClick(View v) {
                 showDialog(button12);
+                return false;
+            }
+        });
+        button13.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                showDialog(button13);
+                return false;
+            }
+        });
+
+        button14.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                showDialog(button14);
+                return false;
+            }
+        });
+
+        button15.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                showDialog(button15);
                 return false;
             }
         });
