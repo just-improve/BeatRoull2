@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="number_value">15dp</dimen>
-    <dimen name="wyswietlacz_value_edittext">15dp</dimen>
-    <dimen name="text_message_value">15dp</dimen>
-    <dimen name="height_of_edittext">36dp</dimen>
-    <dimen name="text_size_of_buttons_wheels">15dp</dimen>
+    <dimen name="number_value">12dp</dimen>
+    <dimen name="wyswietlacz_value_edittext">12dp</dimen>
+    <dimen name="text_message_value">12dp</dimen>
+    <dimen name="height_of_edittext">30dp</dimen>
+    <dimen name="text_size_of_buttons_wheels">10dp</dimen>
     <dimen name="imageAdapter">4dp</dimen>
-    <dimen name="text_size_of_reapeted_name_wheel">17dp</dimen>
-    <dimen name="height_of_text_size_of_reapeted_name_wheel">22dp</dimen>
+    <dimen name="text_size_of_reapeted_name_wheel">12dp</dimen>
+    <dimen name="height_of_text_size_of_reapeted_name_wheel">16dp</dimen>
     <dimen name="marginTextView_editText">12dp</dimen>
+
+
 
 
 
