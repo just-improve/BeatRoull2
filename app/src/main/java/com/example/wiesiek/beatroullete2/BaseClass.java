@@ -293,6 +293,7 @@ public class BaseClass extends AppCompatActivity implements View.OnClickListener
         }
 
         else if (v.getId()==R.id.middle_photo_id){
+            int arr[] = getResources().getIntArray(R.array.photos_facebook);
             Random random = new Random();
             int a = random.nextInt(array_photo.length);
             imageViewCenter.setImageResource(array_photo[a]);

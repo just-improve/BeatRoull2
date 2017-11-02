@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer-array name="photos_facebook">
+        <item>@drawable/face1</item>
+        <item>@drawable/face2</item>
+        <item>@drawable/face3</item>
+        <item>@drawable/face4</item>
+
+    </integer-array>
+
+</resources>
