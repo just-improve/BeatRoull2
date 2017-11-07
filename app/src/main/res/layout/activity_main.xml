@@ -48,12 +48,12 @@
                 <TextView
                     android:id="@+id/textView"
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/height_of_text_size_of_reapeted_name_wheel"
+                    android:layout_height="@dimen/textview_reapeted_name_wheel_height"
                     android:background="@color/reapeted_wheel_background"
                     android:gravity="center"
                     android:text="textView"
                     android:textColor="@color/reapeted_wheel_name"
-                    android:textSize="@dimen/text_size_of_reapeted_name_wheel"
+                    android:textSize="@dimen/textview_reapeted_name_wheel_text_size"
                     android:layout_marginLeft="@dimen/marginTextView_editText"
                     android:layout_marginRight="@dimen/marginTextView_editText"
                     />
@@ -63,11 +63,11 @@
                 <EditText
                     android:id="@+id/editText"
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/height_of_edittext"
+                    android:layout_height="@dimen/height_of_edittext_numbers"
                     android:background="@android:color/white"
                     android:text=" "
                     android:textColor="@android:color/darker_gray"
-                    android:textSize="@dimen/wyswietlacz_value_edittext"
+                    android:textSize="@dimen/edittext_numbers_textsize"
                     android:layout_marginLeft="@dimen/marginTextView_editText"
                     android:layout_marginRight="@dimen/marginTextView_editText"
                     />
@@ -101,7 +101,7 @@
                     android:onClick="ServiceButtons"
                     android:text="1"
                     android:textColor="@android:color/darker_gray"
-                    android:textSize="@dimen/number_value"
+                    android:textSize="@dimen/number_text_size"
 
 
                     />
@@ -114,7 +114,7 @@
                     android:background="@android:color/white"
                     android:text="2"
                     android:textColor="@android:color/darker_gray"
-                    android:textSize="@dimen/number_value" />
+                    android:textSize="@dimen/number_text_size" />
 
                 <Button
                     android:id="@+id/num3"
@@ -124,7 +124,7 @@
                     android:background="@android:color/white"
                     android:text="3"
                     android:textColor="@android:color/darker_gray"
-                    android:textSize="@dimen/number_value" />
+                    android:textSize="@dimen/number_text_size" />
 
             </LinearLayout>
 
@@ -143,7 +143,7 @@
                     android:background="@android:color/white"
                     android:text="4"
                     android:textColor="@android:color/darker_gray"
-                    android:textSize="@dimen/number_value"
+                    android:textSize="@dimen/number_text_size"
 
 
                     />
@@ -156,7 +156,7 @@
                     android:background="@android:color/white"
                     android:text="5"
                     android:textColor="@android:color/darker_gray"
-                    android:textSize="@dimen/number_value" />
+                    android:textSize="@dimen/number_text_size" />
 
                 <Button
                     android:id="@+id/num6"
@@ -166,7 +166,7 @@
                     android:background="@android:color/white"
                     android:text="6"
                     android:textColor="@android:color/darker_gray"
-                    android:textSize="@dimen/number_value" />
+                    android:textSize="@dimen/number_text_size" />
 
 
             </LinearLayout>
@@ -185,7 +185,7 @@
                     android:background="@android:color/white"
                     android:text="7"
                     android:textColor="@android:color/darker_gray"
-                    android:textSize="@dimen/number_value"
+                    android:textSize="@dimen/number_text_size"
 
 
                     />
@@ -198,7 +198,7 @@
                     android:background="@android:color/white"
                     android:text="8"
                     android:textColor="@android:color/darker_gray"
-                    android:textSize="@dimen/number_value" />
+                    android:textSize="@dimen/number_text_size" />
 
                 <Button
                     android:id="@+id/num9"
@@ -208,7 +208,7 @@
                     android:background="@android:color/white"
                     android:text="9"
                     android:textColor="@android:color/darker_gray"
-                    android:textSize="@dimen/number_value" />
+                    android:textSize="@dimen/number_text_size" />
 
             </LinearLayout>
 
@@ -226,7 +226,7 @@
                     android:background="@android:color/white"
                     android:text=" "
                     android:textColor="@android:color/darker_gray"
-                    android:textSize="@dimen/number_value" />
+                    android:textSize="@dimen/number_text_size" />
 
                 <Button
                     android:id="@+id/num0"
@@ -236,7 +236,7 @@
                     android:background="@android:color/white"
                     android:text="0"
                     android:textColor="@android:color/darker_gray"
-                    android:textSize="@dimen/number_value" />
+                    android:textSize="@dimen/number_text_size" />
 
                 <Button
                     android:id="@+id/deleteId"
@@ -246,7 +246,7 @@
                     android:background="@android:color/white"
                     android:text="C"
                     android:textColor="@android:color/darker_gray"
-                    android:textSize="@dimen/number_value" />
+                    android:textSize="@dimen/number_text_size" />
 
 
             </LinearLayout>
