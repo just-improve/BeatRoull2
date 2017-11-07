@@ -5,7 +5,6 @@
         <item>@drawable/face2</item>
         <item>@drawable/face3</item>
         <item>@drawable/face4</item>
-
     </integer-array>
 
 </resources>

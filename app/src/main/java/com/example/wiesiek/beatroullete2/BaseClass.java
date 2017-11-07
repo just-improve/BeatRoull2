@@ -2,6 +2,7 @@ package com.example.wiesiek.beatroullete2;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -44,7 +45,8 @@ public class BaseClass extends AppCompatActivity implements View.OnClickListener
     int overAllCount=0;
     String countedNumbersStr="";
     //może stworzyć klasę nową i zrobić instancję tej klasy i metodę która zwraca tablicę
-    int [] array_photo = { R.mipmap.choose,R.mipmap.face1,R.mipmap.face2,R.mipmap.face3,R.mipmap.face4,R.mipmap.face5,R.mipmap.face6,R.mipmap.face7,R.mipmap.face8,R.mipmap.face9};
+//    int [] array_photo = { R.mipmap.choose,R.mipmap.face1,R.mipmap.face2,R.mipmap.face3,R.mipmap.face4,R.mipmap.face5,R.mipmap.face6,R.mipmap.face7,R.mipmap.face8,R.mipmap.face9};
+    int [] array_photo = {R.mipmap.q1,R.mipmap.q2,R.mipmap.q3,R.mipmap.q4,R.mipmap.q5,R.mipmap.q6,R.mipmap.q7,R.mipmap.q8,R.mipmap.q9,R.mipmap.q10,R.mipmap.q11,R.mipmap.q12,R.mipmap.q13,R.mipmap.q14,R.mipmap.q15,R.mipmap.q16,R.mipmap.q17,R.mipmap.q18,R.mipmap.q19};
     ImageView imageViewCenter;
     ImageView imageViewUp;
 
@@ -77,6 +79,8 @@ public class BaseClass extends AppCompatActivity implements View.OnClickListener
         imageViewUp.setOnClickListener(this);
         imageViewCenter.setOnClickListener(this);
 
+        setRandomPhotoInImageView();
+        setRequestedOrientation (ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 //        ViewPager viewPager = (ViewPager) findViewById(R.id.view_pager);
 //        ImageAdapter adapter = new ImageAdapter(this);
 //        viewPager.setAdapter(adapter);
@@ -294,9 +298,7 @@ public class BaseClass extends AppCompatActivity implements View.OnClickListener
 
         else if (v.getId()==R.id.middle_photo_id){
             int arr[] = getResources().getIntArray(R.array.photos_facebook);
-            Random random = new Random();
-            int a = random.nextInt(array_photo.length);
-            imageViewCenter.setImageResource(array_photo[a]);
+            setRandomPhotoInImageView();
         }
 
         else if (v.getId()==R.id.imageview_up_id){
@@ -308,6 +310,11 @@ public class BaseClass extends AppCompatActivity implements View.OnClickListener
         editText.setSelection(etStr.length());
 
 
+    }
+    private void setRandomPhotoInImageView(){
+        Random random = new Random();
+        int a = random.nextInt(array_photo.length);
+        imageViewCenter.setImageResource(array_photo[a]);
     }
 
     public void SetColorsToWhite(){
@@ -480,6 +487,7 @@ public class BaseClass extends AppCompatActivity implements View.OnClickListener
 
         return repeatedNumbersStr;
     }
+
 
     public void IncreseFontSize() {
         editText.setTextSize((editText.getTextSize() * 0.6f));

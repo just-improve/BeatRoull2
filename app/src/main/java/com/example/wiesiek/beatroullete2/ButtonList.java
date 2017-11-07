@@ -37,8 +37,9 @@ public class ButtonList extends AppCompatActivity implements View.OnClickListene
     ImageView imageView1;
     ImageView imageViewUp;
 
-
-    int [] array_photo = {R.mipmap.facebook_middle, R.mipmap.choose,R.mipmap.face1,R.mipmap.face2,R.mipmap.face3,R.mipmap.face4,R.mipmap.face5,R.mipmap.face6,R.mipmap.face7,R.mipmap.face8,R.mipmap.face9};
+    int [] tablica_losowa;
+    int [] array_photo = {R.mipmap.q1,R.mipmap.q2,R.mipmap.q3,R.mipmap.q4,R.mipmap.q5,R.mipmap.q6,R.mipmap.q7,R.mipmap.q8,R.mipmap.q9,R.mipmap.q10,R.mipmap.q11,R.mipmap.q12,R.mipmap.q13,R.mipmap.q14,R.mipmap.q15,R.mipmap.q16,R.mipmap.q17,R.mipmap.q18,R.mipmap.q19};
+//    int [] array_phot_instagram = {}; ,R.mipmap.q13,R.mipmap.q14,R.mipmap.q15,R.mipmap.q16,R.mipmap.q17,R.mipmap.q18,R.mipmap.q19,R.mipmap.q20
 
     Random random;
     int los;
@@ -52,6 +53,10 @@ public class ButtonList extends AppCompatActivity implements View.OnClickListene
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         setContentView(R.layout.button_list);
         super.onCreate(savedInstanceState);
+
+//        setTablica_losowa();
+
+
         imageView1 = (ImageView) findViewById(R.id.imageId);
         imageViewUp = (ImageView) findViewById(R.id.imageview_up_id);
 
@@ -125,8 +130,23 @@ public class ButtonList extends AppCompatActivity implements View.OnClickListene
         button14.setText(button14Str);
         button15.setText(button15Str);
 
+        setRandomPhotoInImageView();
         LongClicki();
     }
+
+//    public void setTablica_losowa(){
+//        Random random = new Random();
+//        int a = random.nextInt(2);
+//
+//        if (a ==0){
+//            tablica_losowa = array_phot_instagram.clone();
+//        } else if (a==1){
+//            tablica_losowa = array_photo.clone();
+//
+//        }
+//        Log.d("printt", "liczba losowa to "+a +"  "+ tablica_losowa.length);
+//
+//    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -313,6 +333,8 @@ public class ButtonList extends AppCompatActivity implements View.OnClickListene
         editor.putString("name15", button15.getText().toString());
 
         editor.commit();
+
+//        setTablica_losowa();
     }
 
 
@@ -393,14 +415,19 @@ public class ButtonList extends AppCompatActivity implements View.OnClickListene
             startActivity(intent);
         }
         else if (v.getId()==R.id.imageId){
-            random = new Random();
-            los = random.nextInt(array_photo.length);
-            imageView1.setImageResource(array_photo[los]);
+
+            setRandomPhotoInImageView();
         }
         else if (v.getId()==R.id.imageview_up_id){
             final MediaPlayer mp = MediaPlayer.create(this, R.raw.facebook_sound);
             mp.start();
         }
+    }
+
+    private void setRandomPhotoInImageView(){
+        random = new Random();
+        los = random.nextInt(array_photo.length);
+        imageView1.setImageResource(array_photo[los]);
     }
 
     private void showDialog(final Button btn) {
