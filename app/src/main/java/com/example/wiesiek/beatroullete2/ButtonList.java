@@ -409,6 +409,9 @@ public class ButtonList extends AppCompatActivity implements View.OnClickListene
         View view = LayoutInflater.from(this).inflate(R.layout.change_button_text, null);
         final EditText edit_dialog = (EditText) view.findViewById(R.id.editTextButtonChange);
 //        edit_dialog.setText(str);
+        edit_dialog.setText(btn.getText().toString());
+        edit_dialog.setSelection(btn.getText().toString().length());
+
         builder.setView(view);
         builder.setNegativeButton("cancel", null);
         builder.setPositiveButton("confirm", new DialogInterface.OnClickListener() {
@@ -418,6 +421,8 @@ public class ButtonList extends AppCompatActivity implements View.OnClickListene
             }
         });
         builder.show();
+//        edit_dialog.performClick();
+//        edit_dialog.setPressed(true);
 //        imm.sh
 //        Keyboard keyboard = i
 //        InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
