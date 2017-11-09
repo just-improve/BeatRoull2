@@ -4,6 +4,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AlertDialog;
@@ -158,6 +159,8 @@ public class ButtonList extends AppCompatActivity implements View.OnClickListene
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == R.id.sendAllId) {
             SendingEmail();
+        } else if  (item.getItemId() == R.id.send_msg_id) {
+            SendingMessage();
         }
         return super.onOptionsItemSelected(item);
     }
@@ -307,6 +310,14 @@ public class ButtonList extends AppCompatActivity implements View.OnClickListene
             startActivity(Intent.createChooser(i, "Send mail..."));
         } catch (android.content.ActivityNotFoundException ex) {
         }
+        //IncreseFontSize();
+    }
+
+    public void SendingMessage() {
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("smsto:534941274;603474789"));
+        String summaries = SendAllDataToEmail();
+        intent.putExtra("sms_body", summaries);
+        startActivity(intent);
         //IncreseFontSize();
     }
 
