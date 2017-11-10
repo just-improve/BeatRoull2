@@ -172,6 +172,10 @@ public class ButtonList extends AppCompatActivity implements View.OnClickListene
         String wheel10 = Calculations(ManagerDatabase.DatabaseClass.Col10, button10);
         String wheel11 = Calculations(ManagerDatabase.DatabaseClass.Col11, button11);
         String wheel12 = Calculations(ManagerDatabase.DatabaseClass.Col12, button12);
+        String wheel13 = Calculations(ManagerDatabase.DatabaseClass.Col13, button13);
+        String wheel14 = Calculations(ManagerDatabase.DatabaseClass.Col14, button14);
+        String wheel15 = Calculations(ManagerDatabase.DatabaseClass.Col15, button15);
+
 
 
 //        Log.d("wheel1", wheel2);
@@ -187,6 +191,10 @@ public class ButtonList extends AppCompatActivity implements View.OnClickListene
         sb.append(wheel10);
         sb.append(wheel11);
         sb.append(wheel12);
+        sb.append(wheel13);
+        sb.append(wheel14);
+        sb.append(wheel15);
+
         Log.d("all", sb.toString());
         return sb.toString();
 
@@ -302,6 +310,10 @@ public class ButtonList extends AppCompatActivity implements View.OnClickListene
         editor.putString("name10", button10.getText().toString());
         editor.putString("name11", button11.getText().toString());
         editor.putString("name12", button12.getText().toString());
+        editor.putString("name13", button13.getText().toString());
+        editor.putString("name14", button14.getText().toString());
+        editor.putString("name15", button15.getText().toString());
+
         editor.commit();
     }
 
