@@ -4,6 +4,16 @@
     >
 
     <item
+        android:id="@+id/sendSms"
+        android:title="mess"
+        app:showAsAction="always"
+
+        >
+
+    </item>
+
+
+    <item
         android:id="@+id/sendAllId"
         android:title="SA"
         app:showAsAction="always"

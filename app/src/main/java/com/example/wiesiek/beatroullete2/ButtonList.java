@@ -4,6 +4,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AlertDialog;
@@ -159,8 +160,20 @@ public class ButtonList extends AppCompatActivity implements View.OnClickListene
         if (item.getItemId() == R.id.sendAllId) {
             SendingEmail();
         }
+
+        if (item.getItemId() == R.id.sendSms) {
+            SendSms();
+        }
         return super.onOptionsItemSelected(item);
     }
+
+    public void SendSms (){
+        String allSummaries = SendAllDataToEmail();
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("sms:" + 603474789));
+        intent.putExtra("sms_body", allSummaries);
+        startActivity(intent);
+    }
+
 
     public String Calculations(String kolumna, Button button) {
         managerDatabase = new ManagerDatabase(this);
